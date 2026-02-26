@@ -154,7 +154,10 @@ export function renameQuestionById(
     targetId: number,
     newName: string,
 ): Question[] {
-    return [];
+    return questions.map(
+        (ques: Question): Question =>
+            ques.id === targetId ? { ...ques, name: newName } : ques,
+    );
 }
 
 /***
