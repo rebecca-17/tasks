@@ -1,6 +1,6 @@
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
-import { makeBlankQuestion } from "./objects";
+import { makeBlankQuestion, duplicateQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -203,7 +203,18 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string,
 ): Question[] {
-    return [];
+    return questions.map((ques: Question): Question => {
+        if (ques.id !== targetId) {
+            return ques;
+        }
+        const newOptions =
+            targetOptionIndex === -1 ?
+                [...ques.options, newOption]
+            :   ques.options.map((option, i) =>
+                    i === targetOptionIndex ? newOption : option,
+                );
+        return { ...ques, options: newOptions };
+    });
 }
 
 /***
@@ -217,5 +228,11 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number,
 ): Question[] {
-    return [];
+    const index = questions.findIndex((q) => q.id === targetId);
+
+    return [
+        ...questions.slice(0, index + 1),
+        duplicateQuestion(newId, questions[index]),
+        ...questions.slice(index + 1),
+    ];
 }
