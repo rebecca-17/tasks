@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-// import { ChangeType } from "./components/ChangeType";
+import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
 // import { StartAttempt } from "./components/StartAttempt";
 // import { TwoDice } from "./components/TwoDice";
@@ -46,6 +46,9 @@ function App(): React.JSX.Element {
             <hr />
             <hr></hr>
             <RevealAnswer></RevealAnswer>
+            <hr />
+            <hr></hr>
+            <ChangeType></ChangeType>
             <hr />
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
