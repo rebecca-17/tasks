@@ -3,12 +3,12 @@ import { Button } from "react-bootstrap";
 import { QuestionType } from "../interfaces/question";
 
 export function ChangeType(): React.JSX.Element {
-    const [questiontype, setQType] = useState<QuestionType>(
+    const [questiontype, setQuestionType] = useState<QuestionType>(
         "short_answer_question",
     );
 
     function flipType(): void {
-        setQType(
+        setQuestionType(
             questiontype === "short_answer_question" ?
                 "multiple_choice_question"
             :   "short_answer_question",

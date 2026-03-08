@@ -7,6 +7,7 @@ import { RevealAnswer } from "./components/RevealAnswer";
 // import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
 import { Col, Container, Row } from "react-bootstrap";
+import { StartAttempt } from "./components/StartAttempt";
 
 function App(): React.JSX.Element {
     return (
@@ -49,6 +50,10 @@ function App(): React.JSX.Element {
             <hr />
             <hr></hr>
             <ChangeType></ChangeType>
+            <hr />
+
+            <hr></hr>
+            <StartAttempt></StartAttempt>
             <hr />
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
