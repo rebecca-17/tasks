@@ -1,8 +1,13 @@
 import React from "react";
 import "./App.css";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
 import capybara from "./capybara.webp";
-import Button from "react-bootstrap/Button";
-import { Col, Container, Row } from "react-bootstrap";
+import { Counter } from "./components/Counter";
+import { Button, Col, Container, Row } from "react-bootstrap";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
 
 function App(): React.JSX.Element {
     return (
@@ -37,6 +42,7 @@ function App(): React.JSX.Element {
             <header className="App-header">
                 Rebecca Forman UD CISC275 with React Hooks and TypeScript
             </header>
+
             <div>
                 <br />
                 <Button
@@ -47,8 +53,10 @@ function App(): React.JSX.Element {
                     Log Hello World
                 </Button>
             </div>
+
             <br />
             <img src={capybara} alt="Capybara!" />
+
             <div>
                 {"Rebecca's Favorite Animals:"}
                 <ol>
@@ -57,7 +65,30 @@ function App(): React.JSX.Element {
                     <li>Cardinals</li>
                 </ol>
             </div>
-            ;
+
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <hr></hr>
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <hr></hr>
+            <ChangeType></ChangeType>
+            <hr />
+
+            <hr></hr>
+            <StartAttempt></StartAttempt>
+            <hr />
+            <hr></hr>
+            <TwoDice></TwoDice>
+            <hr />
+            <hr></hr>
+            <CycleHoliday></CycleHoliday>
+            <hr />
+            <p>
+                Edit <code>src/App.tsx</code> and save. This page will
+                automatically reload.
+            </p>
         </div>
     );
 }
