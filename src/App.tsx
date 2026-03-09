@@ -2,12 +2,12 @@ import React from "react";
 import "./App.css";
 import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
-// import { StartAttempt } from "./components/StartAttempt";
-// import { TwoDice } from "./components/TwoDice";
-// import { CycleHoliday } from "./components/CycleHoliday";
+import capybara from "./capybara.webp";
 import { Counter } from "./components/Counter";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
 
 function App(): React.JSX.Element {
     return (
@@ -42,6 +42,30 @@ function App(): React.JSX.Element {
             <header className="App-header">
                 Rebecca Forman UD CISC275 with React Hooks and TypeScript
             </header>
+
+            <div>
+                <br />
+                <Button
+                    onClick={() => {
+                        console.log("Hello World!");
+                    }}
+                >
+                    Log Hello World
+                </Button>
+            </div>
+
+            <br />
+            <img src={capybara} alt="Capybara!" />
+
+            <div>
+                {"Rebecca's Favorite Animals:"}
+                <ol>
+                    <li>Dogs</li>
+                    <li>Capybaras</li>
+                    <li>Cardinals</li>
+                </ol>
+            </div>
+
             <hr></hr>
             <Counter></Counter>
             <hr />
@@ -54,6 +78,12 @@ function App(): React.JSX.Element {
 
             <hr></hr>
             <StartAttempt></StartAttempt>
+            <hr />
+            <hr></hr>
+            <TwoDice></TwoDice>
+            <hr />
+            <hr></hr>
+            <CycleHoliday></CycleHoliday>
             <hr />
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
