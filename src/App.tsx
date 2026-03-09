@@ -8,6 +8,10 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { ColoredBox } from "./bad-components/ColoredBox";
+import { ShoveBox } from "./bad-components/ShoveBox";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
 
 function App(): React.JSX.Element {
     return (
@@ -66,25 +70,21 @@ function App(): React.JSX.Element {
                 </ol>
             </div>
 
-            <hr></hr>
-            <Counter></Counter>
-            <hr />
-            <hr></hr>
-            <RevealAnswer></RevealAnswer>
-            <hr />
-            <hr></hr>
-            <ChangeType></ChangeType>
             <hr />
 
-            <hr></hr>
-            <StartAttempt></StartAttempt>
-            <hr />
-            <hr></hr>
-            <TwoDice></TwoDice>
-            <hr />
-            <hr></hr>
-            <CycleHoliday></CycleHoliday>
-            <hr />
+            <div className="react-components">
+                <Counter />
+                <RevealAnswer />
+                <ChangeType />
+                <StartAttempt />
+                <TwoDice />
+                <CycleHoliday />
+                <DoubleHalf />
+                <ChooseTeam />
+                <ColoredBox />
+                <ShoveBox />
+            </div>
+
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
